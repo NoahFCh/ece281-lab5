@@ -97,6 +97,31 @@ architecture top_basys3_arch of top_basys3 is
             o_result: out std_logic_vector(7 downto 0)
         );
     end component ALU;
+    
+    component regA is
+        Port (
+        i_clk : in std_logic;
+        i_reset : in std_logic;
+        o_Q : out std_logic_vector(7 downto 0);
+        i_Q_next : in std_logic_vector(7 downto 0));
+    end component regA;
+    
+    component regB is
+            Port (
+            i_clk : in std_logic;
+            i_reset : in std_logic;
+            o_Q : out std_logic_vector(7 downto 0);
+            i_Q_next : in std_logic_vector(7 downto 0));
+    end component regB;
+    
+    component Mux_4T1 is
+      Port ( SEL : in std_logic_vector (3 downto 0);
+            i_A : in std_logic_vector (7 downto 0);
+            i_B : in std_logic_vector (7 downto 0);
+            i_C : in std_logic_vector (7 downto 0);
+            o_Y : out std_logic_vector (7 downto 0)
+      );
+    end component Mux_4T1;
 begin
 	-- PORT MAPS ----------------------------------------
 
