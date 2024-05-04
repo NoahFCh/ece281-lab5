@@ -31,7 +31,10 @@ entity top_basys3 is
 	       clk : in std_logic;
 	       btnU : in std_logic;
 	       btnC : in std_logic;
-	       sw : in std_logic_vector(7 downto 0)
+	       sw : in std_logic_vector(7 downto 0);
+	       an : out std_logic_vector(3 downto 0);
+	       led : out std_logic_vector(15 downto 0);
+	       seg : out std_logic_vector(7 downto 0)
 	       );
 end top_basys3;
 
@@ -124,9 +127,81 @@ architecture top_basys3_arch of top_basys3 is
     end component Mux_4T1;
 begin
 	-- PORT MAPS ----------------------------------------
-
+clkdiv_inst : clock_divider 
+    generic map ( k_DIV => 2500000 ) -- 1 Hz clock from 100 MHz
+                   port map (                          
+                       i_clk   => clk,
+                       i_reset => w_clk,
+                       o_clk   => w_div
+                   ); 
 	
-	
+twoscomp_decimal_inst : twoscomp_decimal
+    port map(
+        i_binary => w_mux,
+        o_negative => w_D3(0),
+        o_hundreds => w_D2,
+        o_tens => w_D1,
+        o_ones => w_D0
+    );
+    
+TDM4_inst : TDM4
+    port map(
+        i_clk => w_div,
+        i_reset => w_clk,
+        i_D3 => w_D3,
+        i_D2 => w_D2,
+        i_D1 => w_D1,
+        i_D0 => w_D0,
+        o_sel => an,
+        o_data => w_tdm
+    );
+    
+sevenSegDecoder_inst : sevenSegDecoder
+    port map(
+        i_D => w_tdm,
+        o_S => seg
+    );
+    
+controller_fsm_inst : controller_fsm
+    port map(
+        i_reset => btnU,
+        i_adv => btnC,
+        o_cycle => w_cycle
+    );
+    
+ALU_inst : ALU
+    port map(
+        i_A => w_regA,
+        i_B => w_regB,
+        i_op => sw(2 downto 0),
+        o_flags => led(15 downto 13),
+        o_result => w_alu
+    );
+    
+regA_inst : regA
+    port map(
+        i_clk => w_cycle(0),
+        i_Q_next => sw(7 downto 0),
+        o_Q => w_regA,
+        i_reset => btnU
+    );
+    
+regB_inst : regB
+        port map(
+            i_clk => w_cycle(1),
+            i_Q_next => sw(7 downto 0),
+            o_Q => w_regB,
+            i_reset => btnU
+        );
+        
+Mux_4T1_inst : Mux_4T1
+    port map(
+        SEL => w_cycle,
+        i_A => w_regA,
+        i_B => w_alu,
+        i_C => w_regB,
+        o_Y => w_mux
+    );
 	-- CONCURRENT STATEMENTS ----------------------------
 	
 	
