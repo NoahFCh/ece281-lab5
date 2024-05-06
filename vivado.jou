@@ -2,16 +2,29 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon May  6 11:20:50 2024
-# Process ID: 18244
+# Start of session at: Mon May  6 14:39:34 2024
+# Process ID: 4868
 # Current directory: C:/Vivado Code/ece281-lab5
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22372 C:\Vivado Code\ece281-lab5\basic_cpu.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10080 C:\Vivado Code\ece281-lab5\basic_cpu.xpr
 # Log file: C:/Vivado Code/ece281-lab5/vivado.log
 # Journal file: C:/Vivado Code/ece281-lab5\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Vivado Code/ece281-lab5/basic_cpu.xpr}
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files {{C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd}}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {{C:/Vivado Code/ece281-lab5/src/hdl/ALU_tb.vhd}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ALU_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source ALU_tb.tcl

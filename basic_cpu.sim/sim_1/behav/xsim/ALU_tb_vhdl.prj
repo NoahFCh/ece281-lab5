@@ -5,7 +5,7 @@ vhdl xil_defaultlib  \
 "../../../../src/hdl/Mux_4T1_2bits.vhd" \
 "../../../../src/hdl/fullAdder.vhd" \
 "../../../../src/hdl/subtrator.vhd" \
-"../../../../basic_cpu.srcs/sim_1/new/ALU_tb.vhd" \
+"../../../../src/hdl/ALU_tb.vhd" \
 
 # Do not sort compile order
 nosort
