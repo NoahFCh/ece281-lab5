@@ -31,7 +31,7 @@ entity top_basys3 is
 	       clk : in std_logic;
 	       btnU : in std_logic;
 	       btnC : in std_logic;
-	       sw : in std_logic_vector(7 downto 0);
+	       sw : in std_logic_vector(15 downto 0);
 	       an : out std_logic_vector(3 downto 0);
 	       led : out std_logic_vector(15 downto 0);
 	       seg : out std_logic_vector(6 downto 0)
@@ -173,7 +173,7 @@ ALU_inst : ALU
     port map(
         i_A => w_regA,
         i_B => w_regB,
-        i_op => sw(2 downto 0),
+        i_op => sw(15 downto 13),
         o_flags => led(15 downto 13),
         o_result => w_alu
     );

@@ -29,7 +29,8 @@ entity fullAdder is
 		i_N1		:	in  std_logic_vector(7 downto 0);
 		i_N2        :   in  std_logic_vector(7 downto 0);
 		o_sum	    :	out	std_logic_vector(7 downto 0);
-		o_Cout         : out std_logic
+		o_Cout      :   out std_logic;
+		o_zero      :   out std_logic
 	);
 end fullAdder;
 
@@ -66,6 +67,7 @@ begin
 	sum <= unsigned(w_N1) + unsigned(w_N2);
 	
 	o_Cout <= '1' when sum(8) = '1' else '0';
+	o_zero <= '1' when sum = "00000000" else '0';
 	o_sum(0) <= std_logic(sum(0));
 	o_sum(1) <= std_logic(sum(1));
 	o_sum(2) <= std_logic(sum(2));

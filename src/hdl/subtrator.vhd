@@ -25,10 +25,11 @@ library ieee;
 
 entity subtrator is
 	port(
-    i_N1        :    in  std_logic_vector(7 downto 0);
-    i_N2        :   in  std_logic_vector(7 downto 0);
+    i_N1         :    in  std_logic_vector(7 downto 0);
+    i_N2         :    in  std_logic_vector(7 downto 0);
     o_difference :    out    std_logic_vector(7 downto 0);
-    o_Cout       : out std_logic
+    o_Cout       :    out std_logic;
+    o_zero       :    out std_logic
     );
 end subtrator;
 
@@ -41,6 +42,7 @@ begin
     diff <= unsigned(i_N1) - unsigned(i_N2);
     o_difference <= std_logic_vector(diff);
     o_Cout <= '1';
+    o_zero <= '1' when diff = "00000000" else '0';
 ---------------------------------
 
 end Behavioral;

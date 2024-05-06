@@ -73,16 +73,18 @@ component fullAdder is
 		i_N1		:	in  std_logic_vector(7 downto 0);
 		i_N2        :   in  std_logic_vector(7 downto 0);
 		o_sum	    :	out	std_logic_vector(7 downto 0);
-		o_Cout      :   out std_logic
+		o_Cout      :   out std_logic;
+		o_zero      :   out std_logic
 	);
 end component fullAdder;
 
 component subtrator is
 	port(
     i_N1         :    in  std_logic_vector(7 downto 0);
-    i_N2         :   in  std_logic_vector(7 downto 0);
-    o_difference :    out    std_logic_vector(7 downto 0);
-    o_Cout       :    out std_logic     
+    i_N2         :    in  std_logic_vector(7 downto 0);
+    o_difference :    out std_logic_vector(7 downto 0);
+    o_Cout       :    out std_logic;  
+    o_zero       :    out std_logic   
     );
 end component subtrator;
 
@@ -100,15 +102,17 @@ fullAdder_inst : fullAdder
         i_N1 => i_A,
         i_N2 => i_B,
         o_sum => w_sumA,
-        o_Cout => o_flags(0)
-    );
+        o_Cout => o_flags(0),
+        o_zero => o_flags(1)
+ );
     
 subtrator_inst : subtrator
     port map (
         i_N1 => i_A,
         i_N2 => i_B,
        o_difference => w_sumS,
-       o_Cout => o_flags(0)
+       o_Cout => o_flags(0),
+       o_zero => o_flags(1)
     );
     
  Mux_2T1_inst : Mux_2T1
