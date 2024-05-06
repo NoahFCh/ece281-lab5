@@ -49,11 +49,11 @@ begin
 
 -- CONCURRENT STATEMENTS --------------------------------------------------------	
 	-- Next state logic
-	f_Q_next(0) <= (not f_Q(1) and not f_Q(0))
-	            or (f_Q(1) and not f_Q(0));
+	f_Q_next(0) <= (not f_Q(1) and not f_Q(0) and i_adv)
+	            or (f_Q(1) and not f_Q(0) and i_adv);
 	
-	f_Q_next(1) <= (not f_Q(1) and f_Q(0))
-	            or (f_Q(1) and not f_Q(0));
+	f_Q_next(1) <= (not f_Q(1) and f_Q(0) and i_adv)
+	            or (f_Q(1) and not f_Q(0) and i_adv);
 	
 	-- Output logic
 	o_cycle(0) <= not f_Q(1) and not f_Q(0);
@@ -71,7 +71,7 @@ begin
         begin
         if i_reset = '1' then
            f_Q <= "00";               -- reset state is off
-        elsif (i_adv = '1') then
+        elsif (rising_edge(i_adv)) then
            f_Q <= f_Q_next;            -- next state becomes current state
         end if;
         end process register_proc;

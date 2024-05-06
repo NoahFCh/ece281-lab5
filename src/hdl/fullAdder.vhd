@@ -17,61 +17,62 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.numeric_std.all;
 
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity fullAdder is
 	port(
 		-- Switches
-		i_D		:	in  std_logic_vector(2 downto 0);
-		o_M	    :	out	std_logic_vector(1 downto 0)
+		i_N1		:	in  std_logic_vector(7 downto 0);
+		i_N2        :   in  std_logic_vector(7 downto 0);
+		o_sum	    :	out	std_logic_vector(7 downto 0);
+		o_Cout         : out std_logic
 	);
 end fullAdder;
 
+
 architecture fullAdder_arch of fullAdder is 
-	
-  -- declare the component of your top-level design 
-  component halfAdder is
-        port (
-            i_A : in std_logic;
-            i_B : in std_logic;
-            o_S : out std_logic;
-            o_Cout : out std_logic
-            );
-        end component halfAdder;
-  -- declare any signals you will need	
-  signal w_S1 : std_logic := '0';
-  signal w_Cout1 : std_logic := '0';
-  signal w_Cout2 : std_logic := '0';
+    signal w_N1 : std_logic_vector (8 downto 0) := (others => '0');
+    signal w_N2 : std_logic_vector (8 downto 0) := (others => '0');
+    signal sum :  unsigned(8 downto 0) := (others => '0');
+    
 begin
 	-- PORT MAPS --------------------
-    halfAdder1_inst: halfAdder
-    port map(
-        i_A     => sw(0),
-        i_B     => sw(1),
-        o_S     => w_S1,
-        o_Cout  => w_Cout1
-     );
-	---------------------------------
-	halfAdder2_inst: halfAdder
-	port map(
-	    i_A    =>  w_S1,
-	    i_B    =>  sw(2),
-	    o_S    =>  led(0),
-	    o_Cout =>  w_Cout2
-	 );
+	
+	
 	-- CONCURRENT STATEMENTS --------
-	 led(1) <= w_Cout1 or w_Cout2;-- TODO
+	
+	w_N1(0) <= i_N1(0);
+	w_N1(1) <= i_N1(1);
+	w_N1(2) <= i_N1(2);
+	w_N1(3) <= i_N1(3);
+	w_N1(4) <= i_N1(4);
+	w_N1(5) <= i_N1(5);
+	w_N1(6) <= i_N1(6);
+	w_N1(7) <= i_N1(7);
+	
+	w_N2(0) <= i_N2(0);
+	w_N2(1) <= i_N2(1);
+	w_N2(2) <= i_N2(2);
+	w_N2(3) <= i_N2(3);
+	w_N2(4) <= i_N2(4);
+	w_N2(5) <= i_N2(5);
+	w_N2(6) <= i_N2(6);
+	w_N2(7) <= i_N2(7);
+	
+	sum <= unsigned(w_N1) + unsigned(w_N2);
+	
+	o_Cout <= '1' when sum(8) = '1' else '0';
+	o_sum(0) <= std_logic(sum(0));
+	o_sum(1) <= std_logic(sum(1));
+	o_sum(2) <= std_logic(sum(2));
+	o_sum(3) <= std_logic(sum(3));
+	o_sum(4) <= std_logic(sum(4));
+	o_sum(5) <= std_logic(sum(5));
+	o_sum(6) <= std_logic(sum(6));
+	o_sum(7) <= std_logic(sum(7));
 	---------------------------------
 end fullAdder_arch;

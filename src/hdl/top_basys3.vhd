@@ -34,14 +34,14 @@ entity top_basys3 is
 	       sw : in std_logic_vector(7 downto 0);
 	       an : out std_logic_vector(3 downto 0);
 	       led : out std_logic_vector(15 downto 0);
-	       seg : out std_logic_vector(7 downto 0)
+	       seg : out std_logic_vector(6 downto 0)
 	       );
 end top_basys3;
 
 architecture top_basys3_arch of top_basys3 is 
   
 	-- declare components and signals
-	signal w_clk, w_div : std_logic := '0';
+	signal w_div : std_logic := '0';
 	signal w_regA, w_regB, w_alu, w_mux : std_logic_vector(7 downto 0) := (others => '0');
 	signal w_cycle, w_tdm, w_D0, w_D1, w_D2, w_D3 : std_logic_vector(3 downto 0) := (others => '0');
 	
@@ -85,7 +85,7 @@ architecture top_basys3_arch of top_basys3 is
 
    component controller_fsm is
     Port(
-        i_reset: in std_logic;
+        i_reset:   in std_logic;
         i_adv:   in std_logic;
         o_cycle: out std_logic_vector (3 downto 0)
     );
@@ -128,10 +128,10 @@ architecture top_basys3_arch of top_basys3 is
 begin
 	-- PORT MAPS ----------------------------------------
 clkdiv_inst : clock_divider 
-    generic map ( k_DIV => 2500000 ) -- 1 Hz clock from 100 MHz
+    generic map ( k_DIV => 100000 ) -- 1 Hz clock from 100 MHz
                    port map (                          
                        i_clk   => clk,
-                       i_reset => w_clk,
+                       i_reset => btnU,
                        o_clk   => w_div
                    ); 
 	
@@ -147,7 +147,7 @@ twoscomp_decimal_inst : twoscomp_decimal
 TDM4_inst : TDM4
     port map(
         i_clk => w_div,
-        i_reset => w_clk,
+        i_reset => btnU,
         i_D3 => w_D3,
         i_D2 => w_D2,
         i_D1 => w_D1,
@@ -203,7 +203,8 @@ Mux_4T1_inst : Mux_4T1
         o_Y => w_mux
     );
 	-- CONCURRENT STATEMENTS ----------------------------
-	
+	led(12 downto 4) <= (others => '0');
+	led(3 downto 0) <= w_cycle;
 	
 	
 end top_basys3_arch;
