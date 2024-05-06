@@ -21,12 +21,17 @@
 --|
 --+----------------------------------------------------------------------------
 --|
---| ALU OPCODES:
 --|
---|     ADD     000
---|
---|
---|
+--|  Instruction | Opcode | Function |
+--| ------------ | ------ | -------- |
+--| ADD          | 000    | A + B    |
+--| SUBTRACT     | 100    | A - B    |
+--| SHIFT L      | 001    | A << B   |
+--| SHIFT R      | 101    | A >> B   |
+--| AND          | 010    | A AND B  |
+--| AND          | 110    | A AND B  |
+--| OR           | 011    | A OR B   |
+--| OR           | 111    | A OR B   |
 --|
 --+----------------------------------------------------------------------------
 library ieee;
@@ -94,6 +99,8 @@ signal w_m0 : std_logic_vector (7 downto 0) := (others => '0');
 signal w_m1 : std_logic_vector (7 downto 0) := (others => '0');
 signal w_m2 : std_logic_vector (7 downto 0) := (others => '0');
 signal w_m3 : std_logic_vector (7 downto 0) := (others => '0');
+signal w_flagsA : std_logic_vector (2 downto 0) := (others => '0');
+signal w_flagsS : std_logic_vector (2 downto 0) := (others => '0');
 begin
 	-- PORT MAPS ----------------------------------------
 	
@@ -102,8 +109,8 @@ fullAdder_inst : fullAdder
         i_N1 => i_A,
         i_N2 => i_B,
         o_sum => w_sumA,
-        o_Cout => o_flags(0),
-        o_zero => o_flags(1)
+        o_Cout => w_flagsA(0),
+        o_zero => w_flagsA(1)
  );
     
 subtrator_inst : subtrator
@@ -111,8 +118,8 @@ subtrator_inst : subtrator
         i_N1 => i_A,
         i_N2 => i_B,
        o_difference => w_sumS,
-       o_Cout => o_flags(0),
-       o_zero => o_flags(1)
+       o_Cout => w_flagsS(0),
+       o_zero => w_flagsS(1)
     );
     
  Mux_2T1_inst : Mux_2T1
@@ -129,10 +136,15 @@ Mux_4T1_2bits_inst : Mux_4T1_2bits
         i_AM   => w_m0,
         i_BM   => w_m1,
         i_CM   => w_m2,
-        i_DM   => w_m3
+        i_DM   => w_m3,
+        o_Y    => o_result
     ); 	
   
 	-- CONCURRENT STATEMENTS ----------------------------
-
+	with i_op select
+	   o_flags <=  w_flagsA when "000" ,
+	               w_flagsS when "100" ,
+	               "000" when others;
+	
 	
 end behavioral;

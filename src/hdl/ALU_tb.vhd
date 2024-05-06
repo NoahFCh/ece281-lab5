@@ -73,7 +73,22 @@ begin
         w_A <= "00000001"; w_B <= "00000010"; w_op <= "000";
         wait for 10 ns;
         assert w_result = "00000011" and w_flags = "000" report "bad 1 + 2" severity failure;
-            
+        
+        w_A <= "10000001"; w_B <= "10000010"; w_op <= "000";
+        wait for 10 ns;
+        assert w_result = "00000011" and w_flags = "001" report "bad add carryout test" severity failure;
+        
+        w_A <= "00000000"; w_B <= "00000000"; w_op <= "000";
+        wait for 10 ns;
+        assert w_result = "00000000" and w_flags = "010" report "bad add zero test" severity failure;
+        
+        w_A <= "00000100"; w_B <= "00000001"; w_op <= "100";
+        wait for 10 ns;
+        assert w_result = "00000011" and w_flags = "001" report "bad 4 - 1 test" severity failure;
+                
+        w_A <= "00000100"; w_B <= "00000100"; w_op <= "100";
+        wait for 10 ns;
+        assert w_result = "00000000" and w_flags = "011" report "bad subtract zero test" severity failure;
     wait;
     end process;
 end Behavioral;
