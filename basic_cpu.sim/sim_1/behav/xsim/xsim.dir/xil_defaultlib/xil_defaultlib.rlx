@@ -1,0 +1,10 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd,1715027713,vhdl,,,,alu_tb,,,,,,,,
+C:/Vivado Code/ece281-lab5/src/hdl/ALU.vhd,1715021704,vhdl,,,,alu,,,,,,,,
+C:/Vivado Code/ece281-lab5/src/hdl/Mux_2T1.vhd,1714862333,vhdl,,,,mux_2t1,,,,,,,,
+C:/Vivado Code/ece281-lab5/src/hdl/Mux_4T1_2bits.vhd,1714862349,vhdl,,,,mux_4t1_2bits,,,,,,,,
+C:/Vivado Code/ece281-lab5/src/hdl/fullAdder.vhd,1715021519,vhdl,,,,fulladder,,,,,,,,
+C:/Vivado Code/ece281-lab5/src/hdl/subtrator.vhd,1715021628,vhdl,,,,subtrator,,,,,,,,

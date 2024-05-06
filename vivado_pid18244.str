@@ -1,0 +1,1278 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 18244
+License: Customer
+
+Current time: 	Mon May 06 11:21:14 MDT 2024
+Time zone: 	Mountain Standard Time (America/Denver)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 837 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	C26Joel.Bryant
+User home directory: C:/Users/C26Joel.Bryant
+User working directory: C:/Vivado Code/ece281-lab5
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/C26Joel.Bryant/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/C26Joel.Bryant/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/C26Joel.Bryant/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Vivado Code/ece281-lab5/vivado.log
+Vivado journal file location: 	C:/Vivado Code/ece281-lab5/vivado.jou
+Engine tmp dir: 	C:/Vivado Code/ece281-lab5/.Xil/Vivado-18244-C26-5CG2493MR5
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	193 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 505 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Vivado Code\ece281-lab5\basic_cpu.xpr. Version: Vivado v2018.2 
+// bx (ck):  Open Project : addNotify
+// [GUI Memory]: 67 MB (+67266kb) [00:00:16]
+// [Engine Memory]: 505 MB (+378030kb) [00:00:16]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Vivado Code/ece281-lab5/basic_cpu.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Vivado Code/ece281-lab5/basic_cpu.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 534 MB (+4284kb) [00:00:20]
+// [GUI Memory]: 74 MB (+4062kb) [00:00:22]
+// [Engine Memory]: 563 MB (+2367kb) [00:00:22]
+// HMemoryUtils.trashcanNow. Engine heap size: 591 MB. GUI used memory: 41 MB. Current time: 5/6/24 11:21:19 AM MDT
+// Project name: basic_cpu; location: C:/Vivado Code/ece281-lab5; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 842.426 ; gain = 88.047 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 594 MB (+2707kb) [00:00:25]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 22 seconds
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd)]", 1); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectCodeEditor("regA.vhd", 77, 245); // ce (w, ck)
+selectCodeEditor("regA.vhd", 153, 251); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("regA.vhd", 160, 231); // ce (w, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), controller_fsm_inst : controller_fsm(controller_fsm_architecture) (controller_fsm.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), controller_fsm_inst : controller_fsm(controller_fsm_architecture) (controller_fsm.vhd)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 607 MB. GUI used memory: 41 MB. Current time: 5/6/24 11:22:46 AM MDT
+selectCodeEditor("controller_fsm.vhd", 104, 281); // ce (w, ck)
+typeControlKey((HResource) null, "controller_fsm.vhd", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regA.vhd", 1); // k (j, ck)
+selectCodeEditor("regA.vhd", 77, 248); // ce (w, ck)
+typeControlKey((HResource) null, "regA.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("regA.vhd", 266, 272); // ce (w, ck)
+selectCodeEditor("regA.vhd", 80, 248); // ce (w, ck)
+typeControlKey((HResource) null, "regA.vhd", 'c'); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 624 MB (+229kb) [00:02:14]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// [GUI Memory]: 78 MB (+194kb) [00:02:18]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regB_inst : regB(Behavioral) (regB.vhd)]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regB_inst : regB(Behavioral) (regB.vhd)]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("regB.vhd", 120, 240); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 629 MB. GUI used memory: 41 MB. Current time: 5/6/24 11:23:16 AM MDT
+selectCodeEditor("regB.vhd", 76, 246); // ce (w, ck)
+typeControlKey((HResource) null, "regB.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("regB.vhd", 278, 250); // ce (w, ck)
+selectCodeEditor("regB.vhd", 370, 240); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 83 MB (+1087kb) [00:02:35]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 2); // k (j, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regB.vhd", 3); // k (j, ck)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 2); // k (j, ck)
+// Elapsed time: 850 seconds
+selectCodeEditor("controller_fsm.vhd", 357, 279); // ce (w, ck)
+// [GUI Memory]: 87 MB (+313kb) [00:19:06]
+// Elapsed time: 152 seconds
+selectCodeEditor("controller_fsm.vhd", 430, 238); // ce (w, ck)
+// Elapsed time: 192 seconds
+selectCodeEditor("controller_fsm.vhd", 252, 216); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 374, 213); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("controller_fsm.vhd", 380, 216); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 459, 237); // ce (w, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("top_basys3.vhd", 497, 198); // ce (w, ck)
+typeControlKey((HResource) null, "top_basys3.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("top_basys3.vhd", 625, 191); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 2); // k (j, ck)
+selectCodeEditor("controller_fsm.vhd", 480, 219); // ce (w, ck)
+typeControlKey((HResource) null, "controller_fsm.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 412, 231); // ce (w, ck)
+typeControlKey((HResource) null, "controller_fsm.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 290, 239); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 288, 233); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 363, 212); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 404, 225); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 522, 225); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 94, 215); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 102, 215); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("controller_fsm.vhd", 390, 235); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 375, 269); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 378, 278); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 378, 266); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 382, 234); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 400, 214); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 384, 239); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 390, 258); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 391, 275); // ce (w, ck)
+// [GUI Memory]: 92 MB (+1029kb) [00:26:02]
+// Elapsed time: 172 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("controller_fsm.vhd", 343, 246); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regB.vhd", 2); // k (j, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("regB.vhd", 414, 186); // ce (w, ck)
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking 769ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 635 MB. GUI used memory: 40 MB. Current time: 5/6/24 12:38:43 PM MDT
+// Elapsed time: 3017 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regA.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regB.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regA.vhd", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 4); // k (j, ck)
+selectCodeEditor("top_basys3.vhd", 253, 106); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("top_basys3.vhd", 374, 148); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 45 seconds
+selectCodeEditor("top_basys3.vhd", 135, 180); // ce (w, ck)
+// Elapsed time: 90 seconds
+selectCodeEditor("top_basys3.vhd", 233, 182); // ce (w, ck)
+selectCodeEditor("top_basys3.vhd", 139, 178); // ce (w, ck)
+selectCodeEditor("top_basys3.vhd", 341, 158); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 5, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("Basys3_Master.xdc", 5, 182); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Mon May  6 12:43:52 2024] Launched synth_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/synth_1/runme.log [Mon May  6 12:43:52 2024] Launched impl_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 686 MB. GUI used memory: 40 MB. Current time: 5/6/24 12:44:14 PM MDT
+// [Engine Memory]: 686 MB (+31844kb) [01:23:18]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 4 bits, source has 2 bits [C:/Vivado Code/ece281-lab5/src/hdl/controller_fsm.vhd:73]. ]", 1, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Vivado Code\ece281-lab5\src\hdl\controller_fsm.vhd;-;;-;16;-;line;-;73;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 66 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regA.vhd", 1); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 3); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), subtrator_inst : subtrator(Behavioral) (subtrator.vhd)]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), subtrator_inst : subtrator(Behavioral) (subtrator.vhd)]", 9, false); // B (D, ck)
+// Elapsed time: 46 seconds
+selectCodeEditor("ALU.vhd", 203, 178); // ce (w, ck)
+// Elapsed time: 50 seconds
+selectCodeEditor("ALU.vhd", 203, 199); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 200, 179); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// Elapsed time: 38 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectCodeEditor("ALU.vhd", 199, 202); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), fullAdder_inst : fullAdder(fullAdder_arch) (fullAdder.vhd)]", 8, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), fullAdder_inst : fullAdder(fullAdder_arch) (fullAdder.vhd)]", 8, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("fullAdder.vhd", 232, 238); // ce (w, ck)
+selectCodeEditor("fullAdder.vhd", 274, 180); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("fullAdder.vhd", 328, 172); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("fullAdder.vhd", 75, 126); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("ALU.vhd", 79, 192); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 125, 223); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fullAdder.vhd", 4); // k (j, ck)
+// Elapsed time: 31 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fullAdder.vhd", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectCodeEditor("ALU.vhd", 277, 232); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fullAdder.vhd", 4); // k (j, ck)
+selectCodeEditor("fullAdder.vhd", 84, 181); // ce (w, ck)
+// Elapsed time: 48 seconds
+selectCodeEditor("fullAdder.vhd", 371, 222); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("fullAdder.vhd", 348, 182); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "fullAdder.vhd", 'c'); // ce (w, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), subtrator_inst : subtrator(Behavioral) (subtrator.vhd)]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), subtrator_inst : subtrator(Behavioral) (subtrator.vhd)]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("subtrator.vhd", 310, 279); // ce (w, ck)
+typeControlKey((HResource) null, "subtrator.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("subtrator.vhd", 240, 258); // ce (w, ck)
+selectCodeEditor("subtrator.vhd", 237, 249); // ce (w, ck)
+// Elapsed time: 31 seconds
+selectCodeEditor("subtrator.vhd", 185, 302); // ce (w, ck)
+selectCodeEditor("subtrator.vhd", 372, 308); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectCodeEditor("ALU.vhd", 207, 266); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("ALU.vhd", 265, 215); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 265, 215); // ce (w, ck)
+typeControlKey((HResource) null, "ALU.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 257, 212); // ce (w, ck)
+typeControlKey((HResource) null, "ALU.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 104, 233); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 264, 211); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("ALU.vhd", 157, 197); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 301, 233); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("ALU.vhd", 123, 368); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 213, 365); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 32 seconds
+selectCodeEditor("controller_fsm.vhd", 250, 214); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 284, 227); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May  6 12:55:56 2024] Launched synth_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/synth_1/runme.log [Mon May  6 12:55:56 2024] Launched impl_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 116 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bx (ck):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 949 MB. GUI used memory: 42 MB. Current time: 5/6/24 12:57:59 PM MDT
+// [Engine Memory]: 998 MB (+292053kb) [01:37:07]
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 41 MB. Current time: 5/6/24 12:58:09 PM MDT
+// [Engine Memory]: 1,401 MB (+370007kb) [01:37:14]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,484 MB (+13319kb) [01:37:15]
+// [GUI Memory]: 99 MB (+2286kb) [01:37:15]
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 85 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2018.2 INFO: [Device 21-403] Loading part xc7a35tcpg236-1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1719.957 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1719.957 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1800.180 ; gain = 869.375 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// Device view-level: 0.1
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 105 MB (+1040kb) [01:37:19]
+// 'dP' command handler elapsed time: 22 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Open Implemented Design"); // bx (ck)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 32, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,556 MB. GUI used memory: 83 MB. Current time: 5/6/24 12:58:29 PM MDT
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 32, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1811.711 ; gain = 0.031 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AF2A0CA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 2,196 MB (+668979kb) [01:37:44]
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 33, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+// [GUI Memory]: 119 MB (+9177kb) [01:37:52]
+dismissDialog("Program Device"); // bx (ck)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AF2A0CA 
+// n (ck): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 114 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 29, true, false, false, false, true, false); // u (O, ck) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 31, true); // u (O, ck) - Node
+// [GUI Memory]: 130 MB (+5148kb) [01:39:55]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 31, true, false, false, false, true, false); // u (O, ck) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN, "Close"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+closeView(PAResourceOtoP.PAViews_DEVICE, "Device"); // U
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+selectCodeEditor("top_basys3.vhd", 212, 113); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fullAdder.vhd", 4); // k (j, ck)
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "subtrator.vhd", 5); // k (j, ck)
+// Elapsed time: 26 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// [GUI Memory]: 138 MB (+1813kb) [01:41:40]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("regA.vhd", 158, 248); // ce (w, ck)
+selectCodeEditor("regA.vhd", 257, 242); // ce (w, ck)
+selectCodeEditor("regA.vhd", 114, 244); // ce (w, ck)
+selectCodeEditor("regA.vhd", 201, 292); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: [Mon May  6 13:03:15 2024] Launched synth_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/synth_1/runme.log [Mon May  6 13:03:15 2024] Launched impl_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 519ms to process. Increasing delay to 3000 ms.
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 388 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 32, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2471.828 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AF2A0CA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 33, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 275 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 29, true, false, false, false, true, false); // u (O, ck) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN, "Close"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+// [GUI Memory]: 147 MB (+1579kb) [01:54:07]
+// Elapsed time: 67 seconds
+selectCodeEditor("regA.vhd", 414, 215); // ce (w, ck)
+// Elapsed time: 81 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regA_inst : regA(regA_architecture) (regA.vhd)]", 12, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regB_inst : regB(Behavioral) (regB.vhd)]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regB_inst : regB(Behavioral) (regB.vhd)]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), regB_inst : regB(Behavioral) (regB.vhd)]", 13, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("regB.vhd", 201, 235); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("regB.vhd", 262, 232); // ce (w, ck)
+// Elapsed time: 67 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 156 MB (+2279kb) [01:58:49]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2, false, true); // k (j, ck) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ck)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ck)
+// Elapsed time: 38 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// Elapsed time: 43 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), Mux_4T1_inst : Mux_4T1(Behavioral) (Mux_4T1.vhd)]", 14, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), Mux_4T1_inst : Mux_4T1(Behavioral) (Mux_4T1.vhd)]", 14, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// Elapsed time: 68 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regA.vhd", 6); // k (j, ck)
+// Elapsed time: 181 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,200 MB. GUI used memory: 87 MB. Current time: 5/6/24 1:28:31 PM MDT
+// Elapsed time: 274 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+// Elapsed time: 104 seconds
+selectCodeEditor("ALU.vhd", 221, 140); // ce (w, ck)
+// Elapsed time: 114 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Mux_4T1.vhd", 8); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), Mux_4T1_2bits_inst : Mux_4T1_2bits(Behavioral) (Mux_4T1_2bits.vhd)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd), Mux_4T1_2bits_inst : Mux_4T1_2bits(Behavioral) (Mux_4T1_2bits.vhd)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 138 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, ck)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// C (ck): Settings: addNotify
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // q (a, C)
+// c (C): Select Device: addNotify
+// Elapsed time: 113 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (c)
+dismissDialog("Select Device"); // c (C)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (C)
+// bx (ck):  Change Settings : addNotify
+dismissDialog("Change Settings"); // bx (ck)
+dismissDialog("Settings"); // C (ck)
+selectCodeEditor("Mux_4T1_2bits.vhd", 342, 202); // ce (w, ck)
+// [GUI Memory]: 166 MB (+2202kb) [02:17:43]
+// Elapsed time: 34 seconds
+selectCodeEditor("Mux_4T1_2bits.vhd", 335, 204); // ce (w, ck)
+// [GUI Memory]: 175 MB (+623kb) [02:20:43]
+// Elapsed time: 577 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("top_basys3.vhd", 379, 246); // ce (w, ck)
+// Elapsed time: 66 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("ALU.vhd", 169, 112); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 105, 132); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// [GUI Memory]: 188 MB (+4029kb) [02:30:13]
+// Elapsed time: 166 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Source File Properties"); // aw (aE)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+// Elapsed time: 11 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// [GUI Memory]: 198 MB (+459kb) [02:33:21]
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+// 'h' command handler elapsed time: 29 seconds
+dismissDialog("Add Sources"); // c (ck)
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 19); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 20); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, twoscomp_decimal_tb(Behavioral) (twoscomp_decimal_tb.vhd)]", 21, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, twoscomp_decimal_tb(Behavioral) (twoscomp_decimal_tb.vhd)]", 21, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 33 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ALU_TB"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ALU_tb"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 36 seconds
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Command: 'file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new'
+// bx (ck):  Add Simulation Sources  : addNotify
+// Tcl Message: file mkdir C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new 
+// Tcl Message: file mkdir {C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new} 
+// Tcl Message: close [ open {C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 {{C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd}} 
+// I (ck): Define Module: addNotify
+dismissDialog("Add Simulation Sources"); // bx (ck)
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ALU_tb(Behavioral) (ALU_tb.vhd)]", 25, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ALU_tb(Behavioral) (ALU_tb.vhd)]", 25, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 9); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "subtrator.vhd", 5); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, clock_divider_tb(test_bench) (clock_divider_tb.vhd)]", 24, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, clock_divider_tb(test_bench) (clock_divider_tb.vhd)]", 24, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// [GUI Memory]: 211 MB (+3096kb) [02:36:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,200 MB. GUI used memory: 108 MB. Current time: 5/6/24 1:58:32 PM MDT
+// Elapsed time: 218 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_divider_tb.vhd", 8); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, halfAdder(halfAdder_arch) (halfAdder.vhd)]", 27, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, halfAdder(halfAdder_arch) (halfAdder.vhd)]", 27, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, halfAdder(halfAdder_arch) (halfAdder.vhd)]", 27, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_divider_tb.vhd", 8); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_divider_tb.vhd", 8); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fullAdder.vhd", 4); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectCodeEditor("ALU.vhd", 43, 268); // ce (w, ck)
+typeControlKey((HResource) null, "ALU.vhd", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 6); // k (j, ck)
+selectCodeEditor("ALU_tb.vhd", 104, 200); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "halfAdder.vhd", 7); // k (j, ck)
+// Elapsed time: 13 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_basys3(top_basys3_arch) (top_basys3.vhd)]", 23); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top_basys3(top_basys3_arch) (top_basys3.vhd)]", 23); // B (D, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("ALU_tb.vhd", 326, 180); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 13, 203); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Mux_4T1_2bits.vhd", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.vhd", 3); // k (j, ck)
+selectCodeEditor("ALU.vhd", 49, 286); // ce (w, ck)
+selectCodeEditor("ALU.vhd", 59, 306); // ce (w, ck)
+typeControlKey((HResource) null, "ALU.vhd", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Mux_4T1_2bits.vhd", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 5); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("ALU_tb.vhd", 64, 264); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 51, 181); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 38, 161); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 26, 314); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 19, 300); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 168, 302); // ce (w, ck)
+// Elapsed time: 31 seconds
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 47 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 186 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_basys3.vhd", 2); // k (j, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("top_basys3.vhd", 407, 144); // ce (w, ck)
+typeControlKey((HResource) null, "top_basys3.vhd", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 120, 314); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("ALU_tb.vhd", 532, 321); // ce (w, ck)
+// Elapsed time: 50 seconds
+selectCodeEditor("ALU_tb.vhd", 171, 260); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 280, 328); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 182, 334); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 537, 332); // ce (w, ck)
+// Elapsed time: 47 seconds
+selectCodeEditor("ALU_tb.vhd", 38, 268); // ce (w, ck)
+// Elapsed time: 71 seconds
+selectCodeEditor("ALU_tb.vhd", 250, 294); // ce (w, ck)
+// Elapsed time: 190 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller_fsm.vhd", 1); // k (j, ck)
+selectCodeEditor("controller_fsm.vhd", 4, 8); // ce (w, ck)
+selectCodeEditor("controller_fsm.vhd", 0, 109); // ce (w, ck)
+typeControlKey((HResource) null, "controller_fsm.vhd", 'v'); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 31, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// A (ck): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 11 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May  6 14:16:07 2024] Launched synth_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/synth_1/runme.log [Mon May  6 14:16:07 2024] Launched impl_1... Run output will be captured here: C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 142 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 32, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 32, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2490.668 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AF2A0CA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 33, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Vivado Code/ece281-lab5/basic_cpu.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 241 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 29, true, false, false, false, true, false); // u (O, ck) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN, "Close"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_HARDWARE_DESIGN
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectCodeEditor("ALU_tb.vhd", 165, 191); // ce (w, ck)
+// Elapsed time: 16 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd)]", 7); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd)]", 7); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), ALU_inst : ALU(behavioral) (ALU.vhd)]", 7); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_basys3(top_basys3_arch) (top_basys3.vhd), twoscomp_decimal_inst : twoscomp_decimal(Behavioral) (twoscomp_decimal.vhd)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, twoscomp_decimal_tb(Behavioral) (twoscomp_decimal_tb.vhd)]", 17, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, twoscomp_decimal_tb(Behavioral) (twoscomp_decimal_tb.vhd)]", 17, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 25, 195); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 20, 212); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 34, 216); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 56, 212); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 50, 161); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 83, 144); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 44, 36); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 84, 82); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 84, 95); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 96, 175); // ce (w, ck)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 61, 209); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 86, 177); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 28, 208); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 90, 178); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 95, 128); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 96, 24); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 90, 124); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("twoscomp_decimal_tb.vhd", 283, 147); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("ALU_tb.vhd", 301, 130); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("ALU_tb.vhd", 322, 131); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("ALU_tb.vhd", 323, 127); // ce (w, ck)
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectCodeEditor("ALU_tb.vhd", 94, 198); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,200 MB. GUI used memory: 112 MB. Current time: 5/6/24 2:28:33 PM MDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectCodeEditor("twoscomp_decimal_tb.vhd", 673, 179); // ce (w, ck)
+typeControlKey((HResource) null, "twoscomp_decimal_tb.vhd", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 528, 198); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("ALU_tb.vhd", 691, 194); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 86, 134); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "twoscomp_decimal_tb.vhd", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU_tb.vhd", 5); // k (j, ck)
+selectCodeEditor("ALU_tb.vhd", 385, 112); // ce (w, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("ALU_tb.vhd", 658, 133); // ce (w, ck)
+typeControlKey((HResource) null, "ALU_tb.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 493, 147); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 136, 128); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 146, 180); // ce (w, ck)
+// Elapsed time: 25 seconds
+selectCodeEditor("ALU_tb.vhd", 257, 182); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 358, 178); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 484, 178); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 536, 182); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 252, 129); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("ALU_tb.vhd", 494, 168); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ALU_tb(Behavioral) (ALU_tb.vhd)]", 19, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, ALU_tb(Behavioral) (ALU_tb.vhd)]", 19, true, false, false, false, true, false); // B (D, ck) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // aa (aj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top ALU_tb [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj ALU_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2018.2 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 846655f69311450f8a61d78ff6805056 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration ERROR: [VRFC 10-665] expression has 8 elements ; formal i_op expects 3 [C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd:65] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit alu_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 8 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+// Elapsed time: 10 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a (a)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (ck)
+// Elapsed time: 12 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1]", 11); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-665] expression has 8 elements ; formal i_op expects 3 [C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd:65]. ]", 12, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Vivado Code\ece281-lab5\basic_cpu.srcs\sim_1\new\ALU_tb.vhd;-;;-;16;-;line;-;65;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 49 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aw
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-665] expression has 8 elements ; formal i_op expects 3 [C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd:65]. ]", 12, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Vivado Code\ece281-lab5\basic_cpu.srcs\sim_1\new\ALU_tb.vhd;-;;-;16;-;line;-;65;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("ALU_tb.vhd", 307, 164); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 354, 311); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (ck):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj ALU_tb_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-307] analyzing entity ALU_tb 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2018.2 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 846655f69311450f8a61d78ff6805056 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration ERROR: [VRFC 10-665] expression has 4 elements ; formal i_op expects 3 [C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd:65] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit alu_tb in library work failed. 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-99] Step results log file:'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Vivado Code/ece281-lab5/basic_cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 4 seconds
+selectButton("RDIResource.ProgressDialog_ERROR_ENCOUNTERED_PLEASE_SEE_TCL_OK", "OK"); // JButton (A, G)
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OPEN_MESSAGES_VIEW, "Open Messages View"); // a (a)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Simulation, sim_1, [VRFC 10-665] expression has 4 elements ; formal i_op expects 3 [C:/Vivado Code/ece281-lab5/basic_cpu.srcs/sim_1/new/ALU_tb.vhd:65]. ]", 12, false); // ah (O, ck)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Vivado Code\ece281-lab5\basic_cpu.srcs\sim_1\new\ALU_tb.vhd;-;;-;16;-;line;-;65;-;;-;16;-;"); // ah (O, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("ALU_tb.vhd", 306, 210); // ce (w, ck)
+selectCodeEditor("ALU_tb.vhd", 503, 271); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
