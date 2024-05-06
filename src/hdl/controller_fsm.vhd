@@ -32,45 +32,37 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity controller_fsm is
- Port(
+Port(
          i_reset: in std_logic;
          i_adv:   in std_logic;
          o_cycle: out std_logic_vector (3 downto 0)
      );
 end controller_fsm;
-
-architecture controller_fsm_architecture of controller_fsm is
-
--- CONSTANTS ------------------------------------------------------------------
  
-    signal f_Q : std_logic_vector (1 downto 0) := (others => '0');
-    signal f_Q_next : std_logic_vector (1 downto 0) := (others => '0');
+architecture controller_fsm_architecture of controller_fsm is
+ 
+-- CONSTANTS ------------------------------------------------------------------
+    signal f_Q : std_logic_vector (3 downto 0) := "0000";
+    signal f_Q_next : std_logic_vector (3 downto 0) := "0000";
 begin
-
+ 
 -- CONCURRENT STATEMENTS --------------------------------------------------------	
 	-- Next state logic
-	f_Q_next(0) <= (not f_Q(1) and not f_Q(0) and i_adv)
-	            or (f_Q(1) and not f_Q(0) and i_adv);
-	
-	f_Q_next(1) <= (not f_Q(1) and f_Q(0) and i_adv)
-	            or (f_Q(1) and not f_Q(0) and i_adv);
-	
+	f_Q_next(0) <= (f_Q(3) and i_adv) or (f_Q(0) and not i_adv);
+	f_Q_next(1) <= (f_Q(0) and i_adv) or (f_Q(1) and not i_adv);
+	f_Q_next(2) <= (f_Q(1) and i_adv) or (f_Q(2) and not i_adv);
+	f_Q_next(3) <= (f_Q(2) and i_adv) or (f_Q(3) and not i_adv);
 	-- Output logic
-	o_cycle(0) <= not f_Q(1) and not f_Q(0);
-	
-	o_cycle(1) <= not f_Q(1) and f_Q(0);
-	
-	o_cycle(2) <= f_Q(1) and not f_Q(0);
-	
-	o_cycle(3) <= f_Q(1) and f_Q(0);
-	
-	
-	
+	o_cycle(0) <= f_Q(0);
+	o_cycle(1) <= f_Q(1);
+	o_cycle(2) <= f_Q(2);
+	o_cycle(3) <= f_Q(3);
+
 	-- PROCESSES --------------------------------------------------------------------
         register_proc : process (i_adv, i_reset)
         begin
         if i_reset = '1' then
-           f_Q <= "00";               -- reset state is off
+           f_Q <= "0001";               -- reset state is off
         elsif (rising_edge(i_adv)) then
            f_Q <= f_Q_next;            -- next state becomes current state
         end if;
