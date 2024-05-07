@@ -26,7 +26,6 @@ library ieee;
 
 
 entity top_basys3 is
--- TODO
     port(
 	       clk : in std_logic;
 	       btnU : in std_logic;
@@ -43,7 +42,8 @@ architecture top_basys3_arch of top_basys3 is
 	-- declare components and signals
 	signal w_div : std_logic := '0';
 	signal w_regA, w_regB, w_alu, w_mux : std_logic_vector(7 downto 0) := (others => '0');
-	signal w_cycle, w_tdm, w_D0, w_D1, w_D2, w_D3 : std_logic_vector(3 downto 0) := (others => '0');
+	signal w_cycle, w_tdm, w_D0, w_D1, w_D2, w_sel, w_D3 : std_logic_vector(3 downto 0) := (others => '0');
+	signal w_flags : std_logic_vector (2 downto 0) := (others => '0');
 	
 	component clock_divider is
 	generic ( constant k_DIV : natural := 2	); -- How many clk cycles until slow clock toggles
@@ -80,7 +80,8 @@ architecture top_basys3_arch of top_basys3 is
     
     component sevenSegDecoder is
         Port ( i_D : in STD_LOGIC_VECTOR (3 downto 0);
-               o_S : out STD_LOGIC_VECTOR (6 downto 0));
+               o_S : out STD_LOGIC_VECTOR (6 downto 0);
+               i_sel : in std_logic_vector (3 downto 0));
     end component sevenSegDecoder;
 
    component controller_fsm is
@@ -152,14 +153,16 @@ TDM4_inst : TDM4
         i_D2 => w_D2,
         i_D1 => w_D1,
         i_D0 => w_D0,
-        o_sel => an,
+        o_sel => w_sel,
         o_data => w_tdm
     );
     
 sevenSegDecoder_inst : sevenSegDecoder
     port map(
         i_D => w_tdm,
-        o_S => seg
+        o_S => seg,
+        i_sel => w_sel
+        
     );
     
 controller_fsm_inst : controller_fsm
@@ -174,7 +177,7 @@ ALU_inst : ALU
         i_A => w_regA,
         i_B => w_regB,
         i_op => sw(15 downto 13),
-        o_flags => led(15 downto 13),
+        o_flags => w_flags,
         o_result => w_alu
     );
     
@@ -203,6 +206,10 @@ Mux_4T1_inst : Mux_4T1
         o_Y => w_mux
     );
 	-- CONCURRENT STATEMENTS ----------------------------
+    an <= w_sel; 
+    with w_cycle select
+           led(15 downto 13) <=  w_flags when "0100" ,
+                       "000" when others;
 	led(12 downto 4) <= (others => '0');
 	led(3 downto 0) <= w_cycle;
 	

@@ -42,8 +42,8 @@ end controller_fsm;
 architecture controller_fsm_architecture of controller_fsm is
  
 -- CONSTANTS ------------------------------------------------------------------
-    signal f_Q : std_logic_vector (3 downto 0) := "0000";
-    signal f_Q_next : std_logic_vector (3 downto 0) := "0000";
+    signal f_Q : std_logic_vector (3 downto 0) := "0001";
+    signal f_Q_next : std_logic_vector (3 downto 0) := "0001";
 begin
  
 -- CONCURRENT STATEMENTS --------------------------------------------------------	
