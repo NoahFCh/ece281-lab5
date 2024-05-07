@@ -30,7 +30,8 @@ entity fullAdder is
 		i_N2        :   in  std_logic_vector(7 downto 0);
 		o_sum	    :	out	std_logic_vector(7 downto 0);
 		o_Cout      :   out std_logic;
-		o_zero      :   out std_logic
+		o_zero      :   out std_logic;
+		o_neg       :   out std_logic
 	);
 end fullAdder;
 
@@ -76,5 +77,6 @@ begin
 	o_sum(5) <= std_logic(sum(5));
 	o_sum(6) <= std_logic(sum(6));
 	o_sum(7) <= std_logic(sum(7));
+	o_neg <= '1' when sum(7) = '1' else '0';
 	---------------------------------
 end fullAdder_arch;

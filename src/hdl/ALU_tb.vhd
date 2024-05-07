@@ -89,6 +89,36 @@ begin
         w_A <= "00000100"; w_B <= "00000100"; w_op <= "100";
         wait for 10 ns;
         assert w_result = "00000000" and w_flags = "011" report "bad subtract zero test" severity failure;
+        
+        w_A <= "00000001"; w_B <= "00000001"; w_op <= "001";
+        wait for 10 ns;
+        assert w_result = "00000010" and w_flags = "000" report "bad shift of 1 left" severity failure;
+        
+        w_A <= "00100100"; w_B <= "00000010"; w_op <= "001";
+        wait for 10 ns;
+        assert w_result = "10010000" and w_flags = "100" report "bad shift of 2 left" severity failure;
+        
+        w_A <= "00100100"; w_B <= "00000011"; w_op <= "001";
+        wait for 10 ns;
+        assert w_result = "00100000" and w_flags = "000" report "bad shift of 2 left" severity failure;
+                
+        w_A <= "00000010"; w_B <= "00000001"; w_op <= "101";
+        wait for 10 ns;
+        assert w_result = "00000001" and w_flags = "000" report "bad shift of 1 right" severity failure;
+        
+        w_A <= "00100010"; w_B <= "00000011"; w_op <= "101";
+        wait for 10 ns;
+        assert w_result = "00000100" and w_flags = "000" report "bad shift of 3 right" severity failure;
+        
+        -- Test AND and OR
+        w_A <= "10000011"; w_B <= "10000001"; w_op <= "010";
+        wait for 10 ns;
+        assert w_result = "10000001" and w_flags = "100" report "bad and" severity failure;
+        
+        w_A <= "10000011"; w_B <= "00000001"; w_op <= "011";
+        wait for 10 ns;
+        assert w_result = "10000011" and w_flags = "100" report "bad or" severity failure;
+        
     wait;
     end process;
 end Behavioral;

@@ -29,7 +29,8 @@ entity subtrator is
     i_N2         :    in  std_logic_vector(7 downto 0);
     o_difference :    out    std_logic_vector(7 downto 0);
     o_Cout       :    out std_logic;
-    o_zero       :    out std_logic
+    o_zero       :    out std_logic;
+    o_neg        :   out std_logic
     );
 end subtrator;
 
@@ -43,6 +44,7 @@ begin
     o_difference <= std_logic_vector(diff);
     o_Cout <= '1';
     o_zero <= '1' when diff = "00000000" else '0';
+    o_neg <= '1' when diff(7) = '1' else '0';
 ---------------------------------
 
 end Behavioral;
