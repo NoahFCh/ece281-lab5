@@ -30,6 +30,7 @@ entity top_basys3 is
 	       clk : in std_logic;
 	       btnU : in std_logic;
 	       btnC : in std_logic;
+	       btnL : in std_logic;
 	       sw : in std_logic_vector(15 downto 0);
 	       an : out std_logic_vector(3 downto 0);
 	       led : out std_logic_vector(15 downto 0);
@@ -88,7 +89,8 @@ architecture top_basys3_arch of top_basys3 is
     Port(
         i_reset:   in std_logic;
         i_adv:   in std_logic;
-        o_cycle: out std_logic_vector (3 downto 0)
+        o_cycle: out std_logic_vector (3 downto 0);
+        i_btnL : in std_logic
     );
     end component controller_fsm;
     
@@ -169,7 +171,8 @@ controller_fsm_inst : controller_fsm
     port map(
         i_reset => btnU,
         i_adv => btnC,
-        o_cycle => w_cycle
+        o_cycle => w_cycle,
+        i_btnL => btnL
     );
     
 ALU_inst : ALU

@@ -34,8 +34,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity controller_fsm is
 Port(
          i_reset: in std_logic;
-         i_adv:   in std_logic;
-         o_cycle: out std_logic_vector (3 downto 0)
+         i_adv  :   in std_logic;
+         o_cycle: out std_logic_vector (3 downto 0);
+         i_btnL : in std_logic
      );
 end controller_fsm;
  
@@ -63,7 +64,7 @@ begin
         begin
         if i_reset = '1' then
            f_Q <= "0001";               -- reset state is off
-        elsif (rising_edge(i_adv)) then
+        elsif ( rising_edge(i_adv) and i_btnL = '1') then
            f_Q <= f_Q_next;            -- next state becomes current state
         end if;
         end process register_proc;

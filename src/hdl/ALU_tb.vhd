@@ -82,10 +82,26 @@ begin
         wait for 10 ns;
         assert w_result = "00000000" and w_flags = "010" report "bad add zero test" severity failure;
         
+        w_A <= "11101100"; w_B <= "00010100"; w_op <= "000";
+        wait for 10 ns;
+        assert w_result = "00000000" and w_flags = "001" report "bad complex add test" severity failure;
+                
+        w_A <= "11101100"; w_B <= "00010100"; w_op <= "000";
+        wait for 10 ns;
+        assert w_result = "00000000" and w_flags = "001" report "bad complex add test" severity failure;
+        
+        w_A <= "11101100"; w_B <= "00000100"; w_op <= "000";
+        wait for 10 ns;
+        assert w_result = "11110000" and w_flags = "100" report "bad negative add test" severity failure;
+        
         w_A <= "00000100"; w_B <= "00000001"; w_op <= "100";
         wait for 10 ns;
         assert w_result = "00000011" and w_flags = "001" report "bad 4 - 1 test" severity failure;
-                
+        
+        w_A <= "11111100"; w_B <= "00000001"; w_op <= "100";
+        wait for 10 ns;
+        assert w_result = "11111011" and w_flags = "101" report "bad -4 - 1 test" severity failure;
+               
         w_A <= "00000100"; w_B <= "00000100"; w_op <= "100";
         wait for 10 ns;
         assert w_result = "00000000" and w_flags = "011" report "bad subtract zero test" severity failure;
@@ -115,9 +131,17 @@ begin
         wait for 10 ns;
         assert w_result = "10000001" and w_flags = "100" report "bad and" severity failure;
         
+        w_A <= "10111011"; w_B <= "10001001"; w_op <= "110";
+        wait for 10 ns;
+        assert w_result = "10001001" and w_flags = "100" report "bad and complex different opp" severity failure;
+        
         w_A <= "10000011"; w_B <= "00000001"; w_op <= "011";
         wait for 10 ns;
         assert w_result = "10000011" and w_flags = "100" report "bad or" severity failure;
+        
+        w_A <= "11010101"; w_B <= "00110110"; w_op <= "111";
+        wait for 10 ns;
+        assert w_result = "11110111" and w_flags = "100" report "bad or different opp complex" severity failure;
         
     wait;
     end process;

@@ -93,3 +93,5 @@ set_property src_info {type:XDC file:1 line:112 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN U18 [get_ports btnC]
 set_property src_info {type:XDC file:1 line:114 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T18 [get_ports btnU]
+set_property src_info {type:XDC file:1 line:116 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W19 [get_ports btnL]
